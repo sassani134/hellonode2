@@ -10,7 +10,7 @@ name: Deployon:
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "app-name" // name of app
-          heroku_email: "mohit.XXXX@gmail.com"
+          heroku_email: "samuel.assani.pro@gmail.com"
           usedocker: true  // make sure to be true
           docker_build_args: |
             NODE_ENV
