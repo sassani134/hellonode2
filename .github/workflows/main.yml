@@ -1,0 +1,19 @@
+name: Deployon:
+  push:
+    branches:
+      - mainjobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "app-name" // name of app
+          heroku_email: "mohit.XXXX@gmail.com"
+          usedocker: true  // make sure to be true
+          docker_build_args: |
+            NODE_ENV
+        env:
+          NODE_ENV: production
+          SECRET_KEY: ${{ secrets.MY_SECRET_KEY }}
