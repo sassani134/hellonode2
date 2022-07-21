@@ -1,5 +1,10 @@
 {
+  "name": "node-github-docker-heroku",
+  "version": "0.0.1",
+  "description": "Une application NodeJS déployée sur heroku en passant par gitlab ci et docker",
+  "main": "app.js",
+  "scripts": {},
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.17.3"
   }
 }

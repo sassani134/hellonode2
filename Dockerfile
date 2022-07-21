@@ -1,6 +1,7 @@
-FROM node:14-alpine3.12
-ADD ./app /app
-
-WORKDIR /app
-
-CMD ["node", "main.js"]
+FROM node:carbon
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install --only=production
+COPY app.js ./
+EXPOSE $PORT
+CMD [ "node", "app.js" ]
